@@ -44,7 +44,6 @@ There are two things should be input: direction of testing image and transform t
  | --do_resize | -r | resize to original size or not, default=False |
  
 ## Results
-Here is the results generated from this implementation:
 
 * Task1 - aerial map (train for 200 epochs, decay at 100 epoch, -id=False):
 
