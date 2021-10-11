@@ -1,7 +1,7 @@
 """
-Created on Fri Sep 17 2021
+Created on Moon Festival + 1 2021
 
-model: tf_units
+tf_units
 
 @author: Ray
 """
