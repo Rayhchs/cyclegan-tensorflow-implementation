@@ -93,3 +93,5 @@ If you use this code for your research, please cite the original pix2pix paper:
 ## Reference
  
  https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix
+ 
+ https://junyanz.github.io/CycleGAN/
