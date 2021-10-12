@@ -65,7 +65,10 @@ There are two things should be input: direction of testing image and transform t
 | <img src="https://github.com/Rayhchs/cyclegan-tensorflow-implementation/blob/main/test/label_33.jpg" width="250" title="3.jpg"> | <img src="https://github.com/Rayhchs/cyclegan-tensorflow-implementation/blob/main/result/label_33.jpg" width="250">| <img src="https://github.com/Rayhchs/cyclegan-tensorflow-implementation/blob/main/test/33.jpg" width="250"> |
 | <img src="https://github.com/Rayhchs/cyclegan-tensorflow-implementation/blob/main/test/label_45.jpg" width="250" title="3.jpg"> | <img src="https://github.com/Rayhchs/cyclegan-tensorflow-implementation/blob/main/result/label_45.jpg" width="250">| <img src="https://github.com/Rayhchs/cyclegan-tensorflow-implementation/blob/main/test/45.jpg" width="250"> |
 
-* Task2 - mask 2 non mask
+* Task2 - mask 2 non mask:
+In task2, TsaiIngwen and XiJinping are used for testing, others are used for training (aprox. 167 images). Training setting: 1000 epochs, discriminator learning rate start decaying at epochs=500, -id=True.
+
+
 
 ## Discussion
 In task1 A2B, the generated results of cycleGAN are worse than results of pix2pix. This is intuitive because cycleGAN uses unpaired images. In contrast, generated results of cycleGAN seems more creative than pix2pix (see second(6.jpg) and last(45.jpg) generated map). 
