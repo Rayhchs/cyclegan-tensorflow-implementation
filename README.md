@@ -77,7 +77,14 @@ In task2, TsaiIngwen and XiJinping are used for testing, others are used for tra
 | <img src="https://github.com/Rayhchs/cyclegan-tensorflow-implementation/blob/main/result/TsaiIngwen_0006.png" width="160"> | <img src="https://github.com/Rayhchs/cyclegan-tensorflow-implementation/blob/main/test/TsaiIngwen_0006.png" width="160">|<img src="https://github.com/Rayhchs/cyclegan-tensorflow-implementation/blob/main/result/XiJinping_0005.png" width="160" title="Pooh">| <img src="https://github.com/Rayhchs/cyclegan-tensorflow-implementation/blob/main/test/XiJinping_0005.png" width="160" title="Pooh"> |
 
 ## Discussion
-In task1 A2B, the generated results of cycleGAN are worse than results of pix2pix. This is intuitive because cycleGAN uses unpaired images. In contrast, generated results of cycleGAN seems more creative than pix2pix (see second(6.jpg) and last(45.jpg) generated map). 
+* In task1 A2B, the generated results of cycleGAN are worse than results of pix2pix. This is intuitive because cycleGAN uses unpaired images. In contrast, generated results of cycleGAN seems more creative than pix2pix (see second(6.jpg) and last(45.jpg) generated map).
+
+* In task2, the generated results are suck, however, it can be notice that the generators realize "mask" is crucial issue to deceive discriminators. In my opinion, the reason causing terrible results might be: (1) insufficient data, (2) insufficient training epoch (not sure) and (3) inappropriate decaying epoch (not sure). 
+
+There is a better generated result from training data shown in below:
+| mask | non mask |
+| ------------- | ------------- |
+| <img src="https://github.com/Rayhchs/cyclegan-tensorflow-implementation/blob/main/testA2B.jpg" width="160"> | <img src="https://github.com/Rayhchs/cyclegan-tensorflow-implementation/blob/main/o.jpg" width="160">|
 
 ## Acknowledgements
 Code heavily borrows from [pix2pix](https://github.com/phillipi/pix2pix) and [pix2pix-tensorflow](https://github.com/yenchenlin/pix2pix-tensorflow). Thanks for the excellent work!
