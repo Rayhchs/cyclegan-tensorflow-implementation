@@ -1,0 +1,5 @@
+tensorflow-gpu==2.5.0
+tensorflow_addons==0.14.0
+pillow==8.3.2
+matplotlib==3.4.3
+opencv-python
