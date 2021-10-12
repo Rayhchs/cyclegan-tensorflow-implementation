@@ -45,7 +45,7 @@ There are two things should be input: direction of testing image and transform t
  
 ## Results
 
-* Task1 - aerial map A2B (train for 200 epochs, decay at 100 epoch, -id=False):
+* Task1 - aerial map A2B (train for 200 epochs, decay at 100 epoch, -id=True):
 
 | Aerial image | Generated map (pix2pix) | Generated map (cycleGAN) | Ground truth |
 | ------------- | ------------- | ------------- | ------------- |
@@ -64,6 +64,8 @@ There are two things should be input: direction of testing image and transform t
 | <img src="https://github.com/Rayhchs/cyclegan-tensorflow-implementation/blob/main/test/label_24.jpg" width="250" title="3.jpg"> | <img src="https://github.com/Rayhchs/cyclegan-tensorflow-implementation/blob/main/result/label_24.jpg" width="250">| <img src="https://github.com/Rayhchs/cyclegan-tensorflow-implementation/blob/main/test/24.jpg" width="250"> |
 | <img src="https://github.com/Rayhchs/cyclegan-tensorflow-implementation/blob/main/test/label_33.jpg" width="250" title="3.jpg"> | <img src="https://github.com/Rayhchs/cyclegan-tensorflow-implementation/blob/main/result/label_33.jpg" width="250">| <img src="https://github.com/Rayhchs/cyclegan-tensorflow-implementation/blob/main/test/33.jpg" width="250"> |
 | <img src="https://github.com/Rayhchs/cyclegan-tensorflow-implementation/blob/main/test/label_45.jpg" width="250" title="3.jpg"> | <img src="https://github.com/Rayhchs/cyclegan-tensorflow-implementation/blob/main/result/label_45.jpg" width="250">| <img src="https://github.com/Rayhchs/cyclegan-tensorflow-implementation/blob/main/test/45.jpg" width="250"> |
+
+* Task2 - mask 2 non mask
 
 ## Discussion
 In task1 A2B, the generated results of cycleGAN are worse than results of pix2pix. This is intuitive because cycleGAN uses unpaired images. In contrast, generated results of cycleGAN seems more creative than pix2pix (see second(6.jpg) and last(45.jpg) generated map). 
