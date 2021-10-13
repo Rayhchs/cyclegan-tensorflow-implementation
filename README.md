@@ -22,8 +22,12 @@ A tensorflow implementation of [Unpaired Image-to-Image Translation using Cycle-
       python -m main train
     
 There are two things should be input: directions containing domain A & B images. 
-* Train
 
+For training detail:
+
+      tensorboard --logdir=./log
+
+* Test
       python -m main test
     
 There are two things should be input: direction of testing image and transform type (A2B or B2A). 
