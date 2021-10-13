@@ -108,6 +108,7 @@ class cyclegan():
             h = self.units.uk(h, filters=128, name='u128', reuse=reuse)
             h = self.units.uk(h, filters=64, name='u64', reuse=reuse)
             h = self.units.c7s1_k(h, filters=3, name='c7s1_3', do_relu=False, do_norm=False, reuse=reuse)
+
         return h
 
     def discriminator(self, x, reuse=False, name="discriminator"):
@@ -129,6 +130,7 @@ class cyclegan():
         return h
 
     def D_loss(self, DA_fake, DB_fake, DA_real, DB_real):
+        
         # discriminator
         loss_db = self.units.discriminator_loss(DB_real, DB_fake)
         loss_da = self.units.discriminator_loss(DA_real, DA_fake)

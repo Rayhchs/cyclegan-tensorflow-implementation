@@ -37,6 +37,7 @@ class tf_units():
                 h = tf.nn.relu(h)
             else:
                 h = tf.nn.tanh(h)
+
             return h
 
     def dk(self, inputs, filters, reuse=False, name='downsample_dk'):
@@ -57,6 +58,7 @@ class tf_units():
                                                 center=False,
                                                 scale=False)(h)
             h = tf.nn.relu(h)
+
             return h
 
     def Rk(self, inputs, filters, reuse=False, name='residual_Rk'):
@@ -88,6 +90,7 @@ class tf_units():
             h = tfa.layers.InstanceNormalization(epsilon=1e-5,
                                                 center=False,
                                                 scale=False)(h)
+
             return tf.add(h, inputs)
 
     def uk(self, inputs, filters, reuse=False, name='upsample_uk'):
@@ -115,6 +118,7 @@ class tf_units():
                                                 center=False,
                                                 scale=False)(h)
             h = tf.nn.relu(h)
+
             return h
 
     def d_block(self, inputs, filters, strides, padding='same', reuse=False, do_relu=True, do_norm=True, name='discriminator_block'):
@@ -150,16 +154,20 @@ class tf_units():
         loss_d_real = tf.reduce_mean(tf.squared_difference(real, tf.ones_like(real)))
         loss_d_fake = tf.reduce_mean(tf.square(fake))
         loss_d = (loss_d_real + loss_d_fake) * 0.5
+
         return loss_d
 
     def generator_loss(self, fake):
         loss_g = tf.reduce_mean(tf.squared_difference(fake, tf.ones_like(fake)))
+
         return loss_g
 
     def CC_loss(self, real, recon, L1_lambda=10):
         loss_cc = tf.reduce_mean(tf.abs(real - recon))
+
         return loss_cc * L1_lambda
 
     def idt_loss(self, real, same, L1_lambda=10):
         loss = tf.reduce_mean(tf.abs(real - same))
+        
         return 0.5 * L1_lambda * loss

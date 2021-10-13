@@ -38,6 +38,7 @@ def fill_data(A_path, B_path):
         for i in fill: A_path.append(A_path[i]) 
     else:
         pass
+
     return A_path, B_path
 
 def random_crop(inputs):
@@ -58,6 +59,7 @@ def load_data(A_path, B_path):
         b_img = (b_img / 127.5) - 1
         a_imgs.append(a_img)
         b_imgs.append(b_img)
+        
     return a_imgs, b_imgs
 
 def load_test_data(A_path):
